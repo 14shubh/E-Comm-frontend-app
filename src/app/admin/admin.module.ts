@@ -20,4 +20,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
     AdminRoutingModule
   ]
 })
-export class AdminModule { }
+export class AdminModule {
+  // constructor(){
+  //   console.log("Admin module loaded");
+  // }
+ }
