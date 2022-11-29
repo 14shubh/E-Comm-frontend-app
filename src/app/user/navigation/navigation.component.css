@@ -1,40 +1,206 @@
-.logo .brand{
+.logo .brand {
   font-size: 24px;
   color: rgb(2, 88, 35);
   font-weight: 600;
   text-decoration: none;
 }
-.logo .brand > span{
+
+.logo .brand>span {
   color: rgb(98, 97, 97);
 }
-.search-bar{
+
+.search-bar {
   width: 550px;
   /* background: aqua; */
 }
-.search-bar input{
+
+.search-bar input {
   width: 100%;
   outline: none;
   border: 3px solid rgb(225, 225, 225);
   padding: 5px 25px;
   border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
 }
-.navbar-list{
+
+.navbar-list {
   display: flex;
   padding: 0;
   margin: 0;
-
 }
-.navbar-list .nav-links{
-  margin-right: 25px;
+
+.navbar-list .nav-links {
   list-style: none;
 }
-.navbar-list .nav-links a{
+
+.navbar-list .nav-links:nth-child(1) {
+  margin-right: 25px;
+}
+
+.navbar-list .nav-links a {
   color: rgb(2, 88, 35);
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 1px;
 }
-.navbar-list .nav-links a:hover{
+
+.navbar-list .nav-links a:hover {
   color: rgb(22, 170, 79);
 }
 
+/* Secondary navigation style */
+
+.secondary-navbar {
+  border-top: 2px solid rgb(235, 235, 235);
+  margin-top: 30px;
+  padding: 5px 0;
+}
+
+/* .secondary-nav{
+
+} */
+.secondary-nav ul {
+  display: flex;
+  justify-content: space-evenly;
+
+
+}
+
+.secondary-nav ul li {
+  list-style: none;
+}
+
+.secondary-nav ul li a {
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(2, 88, 35);
+  letter-spacing: 1px;
+}
+
+@media only screen and (max-width:992px) {
+
+
+  .burger {
+    position: relative;
+    background: rgb(2, 88, 35);
+    height: 35px;
+    width: 35px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .burger span {
+    border-radius: 5px;
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    background: rgb(252, 252, 252);
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+
+  }
+  .burger span:nth-child(2) {
+    left: 5px;
+    width: 15px;
+    transform: translateY(-10px);
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+  }
+
+  .burger span:nth-child(3) {
+    right: 5px;
+    width: 15px;
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    -ms-transform: translateY(10px);
+    -o-transform: translateY(10px);
+  }
+  .menu-icon span:nth-child(1){
+    transform: translateX(200%);
+    -webkit-transform: translateX(200%);
+    -moz-transform: translateX(200%);
+    -ms-transform: translateX(200%);
+    -o-transform: translateX(200%);
+}
+ .menu-icon span:nth-child(2){
+  width: 25px;
+  transform: rotate(40deg);
+  -webkit-transform: rotate(40deg);
+  -moz-transform: rotate(40deg);
+  -ms-transform: rotate(40deg);
+  -o-transform: rotate(40deg);
+}
+.menu-icon span:nth-child(3){
+  width: 25px;
+  transform: rotate(-40deg);
+  -webkit-transform: rotate(-40deg);
+  -moz-transform: rotate(-40deg);
+  -ms-transform: rotate(-40deg);
+  -o-transform: rotate(-40deg);
+}
+  .navbar-links {
+    display: none;
+  }
+
+  .secondary-nav {
+    position: absolute;
+    right: -100%;
+    width: 250px;
+    background: rgb(2, 88, 35);
+    height: 550px;
+    padding: 30px 25px;
+    transition: 0.4s ease;
+    -webkit-transition: 0.4s ease;
+    -moz-transition: 0.4s ease;
+    -ms-transition: 0.4s ease;
+    -o-transition: 0.4s ease;
+  }
+
+  .menu {
+    right: 0;
+  }
+
+  .secondary-nav ul {
+    flex-direction: column;
+  }
+
+  .secondary-nav ul li a {
+    color: #fff;
+    margin-left: 25px;
+  }
+
+  .secondary-nav ul li i {
+    position: absolute;
+    left: 15px;
+    margin-top: 5px;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  .secondary-nav ul li {
+    margin-bottom: 35px;
+  }
+
+  .inside-links ul {
+    padding-left: 0;
+  }
+
+}

@@ -6,10 +6,18 @@
     <div class="search-bar">
       <input type="search" class="search-input" placeholder="Search..." />
     </div>
+    <div class="burger" [class.menu-icon]="change_icon" (click)="burgerMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
     <div class="navbar-links">
       <ul class="navbar-list">
         <li class="nav-links">
-          <a href="#">Cart <i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="#">
+            Cart
+            <i class="fa-solid fa-cart-shopping"></i>
+          </a>
         </li>
         <li class="nav-links">
           <a routerLink="sign-in"
@@ -18,6 +26,26 @@
           </a>
         </li>
       </ul>
+    </div>
+
+    <div class="container secondary-navbar">
+     <!-- <span class="border"></span> -->
+      <div class="secondary-nav" [class.menu]="activeMenu">
+        <ul>
+          <li><a href="">Home </a><i class="fa fa-home" aria-hidden="true"></i></li>
+          <li><a href="">About </a><i class="fa fa-clipboard" aria-hidden="true"></i></li>
+          <li><a href="">Category </a><i class="fa fa-list" aria-hidden="true"></i></li>
+          <li><a href="">Contact </a><i class="fa fa-phone" aria-hidden="true"></i></li>
+          <li class="inside-links">
+            <ul>
+              <li><a href="">Cart
+                </a><i class="fa-solid fa-cart-shopping"></i></li>
+                <li><a href="">Sign in
+                </a><i class="fa-solid fa-right-to-bracket"></i></li>
+              </ul>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </nav>

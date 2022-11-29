@@ -5,14 +5,18 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   templateUrl: './navigation.component.html',
   styleUrls: ['./navigation.component.css']
 })
+
+
+
 export class NavigationComponent implements OnInit {
   constructor() { }
-  @ViewChild('mytag') li: any;
-
-  ngOnInit(): void {
+  activeMenu:boolean = false;
+  change_icon:boolean = false;
+  burgerMenu(){
+    this.activeMenu = ! this.activeMenu;
+    this.change_icon = ! this.change_icon;
   }
 
-  ngAfterViewInit():void{
-    console.log(this.li.nativeElement.innerHTML);
+  ngOnInit(): void {
   }
 }
